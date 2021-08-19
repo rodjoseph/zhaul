@@ -9,7 +9,7 @@
     "@emotion/styled": "latest",
     "@material-ui/core": "next",
     "@supabase/supabase-js": "1.21.3",
-    "@supabase/ui": "0.32.2",
+    "@supabase/ui": "1.0.1",
     "clsx": "latest",
     "next": "latest",
     "react": "latest",
