@@ -21,6 +21,7 @@ export interface paths {
           end?: parameters["rowFilter.bookings.end"];
           truck?: parameters["rowFilter.bookings.truck"];
           user?: parameters["rowFilter.bookings.user"];
+          created_at?: parameters["rowFilter.bookings.created_at"];
           /** Filtering Columns */
           select?: parameters["select"];
           /** Ordering */
@@ -76,6 +77,7 @@ export interface paths {
           end?: parameters["rowFilter.bookings.end"];
           truck?: parameters["rowFilter.bookings.truck"];
           user?: parameters["rowFilter.bookings.user"];
+          created_at?: parameters["rowFilter.bookings.created_at"];
         };
         header: {
           /** Preference */
@@ -95,6 +97,7 @@ export interface paths {
           end?: parameters["rowFilter.bookings.end"];
           truck?: parameters["rowFilter.bookings.truck"];
           user?: parameters["rowFilter.bookings.user"];
+          created_at?: parameters["rowFilter.bookings.created_at"];
         };
         body: {
           /** bookings */
@@ -613,6 +616,7 @@ export interface definitions {
      */
     truck: number;
     user?: string;
+    created_at: string;
   };
   bookingsview: {
     /**
@@ -703,6 +707,7 @@ export interface parameters {
   "rowFilter.bookings.end": string;
   "rowFilter.bookings.truck": string;
   "rowFilter.bookings.user": string;
+  "rowFilter.bookings.created_at": string;
   /** bookingsview */
   "body.bookingsview": definitions["bookingsview"];
   "rowFilter.bookingsview.id": string;

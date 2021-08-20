@@ -30,6 +30,13 @@ const columns: GridColDef[] = [
     width: 180,
     editable: true,
   },
+  {
+    field: 'created_at',
+    headerName: 'Created at',
+    type: 'datetime',
+    width: 180,
+    editable: true,
+  },
 ];
 
 // const rows = [
@@ -46,15 +53,13 @@ const columns: GridColDef[] = [
 
 export default function BookingsDataGrid({rows}: {rows: Booking[]}) {
   return (
-    <div style={{ height: 400, width: '100%' }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={50}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-        disableSelectionOnClick
-      />
-    </div>
+    <DataGrid
+      rows={rows}
+      columns={columns}
+      pageSize={50}
+      rowsPerPageOptions={[5]}
+      checkboxSelection
+      disableSelectionOnClick
+    />
   );
 }
