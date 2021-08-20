@@ -49,6 +49,30 @@ import {
               About
             </Button>
           </Link>
+          <Link href="/booking" passHref>
+            {/* <IconButton>
+              <InfoIcon />
+            </IconButton> */}
+            <Button color="inherit">
+              Book
+            </Button>
+          </Link>
+          <Link href="/mybookings" passHref>
+            {/* <IconButton>
+              <InfoIcon />
+            </IconButton> */}
+            <Button color="inherit">
+              My Bookings
+            </Button>
+          </Link>
+          <Link href="/admin" passHref>
+            {/* <IconButton>
+              <InfoIcon />
+            </IconButton> */}
+            <Button color="inherit">
+              Admin Only
+            </Button>
+          </Link>
           {user ? (
             <div>
               <IconButton
