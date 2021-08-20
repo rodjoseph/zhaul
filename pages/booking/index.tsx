@@ -19,6 +19,7 @@ import {
 } from "@material-ui/core";
 import { supabase } from "../../constants/supabase";
 import { Truck } from "../../types/types";
+import Layout from "../../components/layout";
 
 export default function Booking() {
   const [startDateTime, setStartDateTime] = React.useState();
@@ -62,6 +63,7 @@ export default function Booking() {
 
   if (!user) return <Auth supabaseClient={supabase} providers={['google', 'github']}/>;
   return (
+    <Layout>
     <Container maxWidth="sm">
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
@@ -123,5 +125,6 @@ export default function Booking() {
         <Copyright />
       </Box>
     </Container>
+    </Layout>
   );
 }

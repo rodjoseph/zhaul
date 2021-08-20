@@ -22,6 +22,7 @@ import {
 import { supabase } from "../constants/supabase";
 import { Truck, Booking } from "../types/types";
 import BookingsDataGrid from "../components/bookingsgrid";
+import Layout from "../components/layout";
 
 export default function AdminPage() {
   const [bookings, setBookings] = React.useState<Booking[]>();
@@ -44,6 +45,7 @@ export default function AdminPage() {
 
   if (!user) return <Auth supabaseClient={supabase} providers={['google', 'github']}/>;
   return (
+    <Layout>
     <Container maxWidth="md">
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
@@ -59,5 +61,6 @@ export default function AdminPage() {
         <Copyright />
       </Box>
     </Container>
+    </Layout>
   );
 }
