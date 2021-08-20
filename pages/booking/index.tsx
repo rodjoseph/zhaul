@@ -21,7 +21,7 @@ import { supabase } from "../../constants/supabase";
 import { Truck } from "../../types/types";
 import Layout from "../../components/layout";
 
-export default function Booking() {
+export default function BookingPage() {
   const [startDateTime, setStartDateTime] = React.useState();
   const [endDateTime, setEndDateTime] = React.useState();
   const [availableTrucks, setAvailableTrucks] = React.useState<Truck[]>()

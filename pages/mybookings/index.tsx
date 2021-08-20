@@ -18,6 +18,7 @@ import { supabase } from "../../constants/supabase";
 import { Booking } from "../../types/types";
 import BookingsDataGrid from "../../components/bookingsgrid";
 import Copyright from "../../src/Copyright";
+import Layout from "../../components/layout";
 
 export default function MyBookingsPage() {
   const [bookings, setBookings] = React.useState<Booking[]>();
@@ -40,20 +41,22 @@ export default function MyBookingsPage() {
 
   if (!user) return <Auth supabaseClient={supabase} providers={['google', 'github']}/>;
   return (
-    <Container maxWidth="md">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Your Bookings
-        </Typography>
-        {/* Add list of bookings that can be managed by the admin */}
-        {/* {
-            JSON.stringify(bookings)
-        } */}
-        {bookings ?
-          <BookingsDataGrid rows={bookings}/> : <></>
-        }
-        <Copyright />
-      </Box>
-    </Container>
+    <Layout>
+      <Container maxWidth="md">
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            Your Bookings
+          </Typography>
+          {/* Add list of bookings that can be managed by the admin */}
+          {/* {
+              JSON.stringify(bookings)
+          } */}
+          {bookings ?
+            <BookingsDataGrid rows={bookings}/> : <></>
+          }
+          <Copyright />
+        </Box>
+      </Container>
+    </Layout>
   );
 }
