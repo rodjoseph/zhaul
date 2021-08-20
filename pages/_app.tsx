@@ -5,8 +5,8 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { CacheProvider, EmotionCache, ThemeProvider } from "@emotion/react";
 import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
-import { Auth } from "@supabase/ui";
 import { supabase } from "../constants/supabase";
+import { Auth } from "@supabase/ui";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
@@ -17,7 +17,7 @@ interface MyAppProps extends AppProps {
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   return (
-    <Auth.UserContextProvider supabaseClient={supabase}>
+    <Auth.UserContextProvider supabaseClient={supabase} >
       <CacheProvider value={emotionCache}>
         <Head>
           <title>My page</title>

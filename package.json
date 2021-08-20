@@ -8,8 +8,10 @@
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
     "@material-ui/core": "next",
+    "@material-ui/data-grid": "^4.0.0-alpha.37",
+    "@material-ui/styles": "^4.11.4",
     "@supabase/supabase-js": "1.21.3",
-    "@supabase/ui": "1.0.1",
+    "@supabase/ui": "^0.32.4",
     "clsx": "latest",
     "next": "latest",
     "react": "latest",
@@ -19,7 +21,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
+    "update-types": "npx openapi-typescript https://ylhcsfcbathqpwivflof.supabase.co/rest/v1/?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYyOTEwMzgzMywiZXhwIjoxOTQ0Njc5ODMzfQ.j1UfeEPVbZRxERgBdzb-D-PoXLGcR8WAcFBmvXM_qwA --output types/supabase.ts"
   },
   "devDependencies": {
     "@types/node": "latest",
