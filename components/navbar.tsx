@@ -13,6 +13,7 @@ import {
   import Link from "next/link";
   import * as React from "react";
   import { Auth } from "@supabase/ui";
+import { supabase } from "../constants/supabase";
   
   export default function Navbar() {
     const { user } = Auth.useUser();
@@ -41,14 +42,6 @@ import {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Z-Haul
           </Typography>
-          <Link href="/about" passHref>
-            {/* <IconButton>
-              <InfoIcon />
-            </IconButton> */}
-            <Button color="inherit">
-              About
-            </Button>
-          </Link>
           <Link href="/booking" passHref>
             {/* <IconButton>
               <InfoIcon />
@@ -100,12 +93,16 @@ import {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <Link href="/profile" passHref>
+                {/* <Link href="/profile" passHref>
                   <MenuItem>Profile</MenuItem>
                 </Link>
                 <Link href="/account" passHref>
                   <MenuItem>My account</MenuItem>
-                </Link>
+                </Link> */}
+                <Link href="/mybookings" passHref>
+                  <MenuItem>My bookings</MenuItem>
+                </Link> 
+                <MenuItem onClick={() => supabase.auth.signOut()}><Typography color="error">Logout</Typography></MenuItem>
               </Menu>
             </div>
           ) : (
