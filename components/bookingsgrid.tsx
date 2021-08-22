@@ -3,7 +3,7 @@ import { DataGrid, GridColDef } from '@material-ui/data-grid';
 import { Booking } from '../types/types';
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 90 },
+  { field: 'id', headerName: 'ID', width: 50 },
   {
     field: 'user',
     headerName: 'User ID',
@@ -30,13 +30,13 @@ const columns: GridColDef[] = [
     width: 180,
     editable: true,
   },
-  {
-    field: 'created_at',
-    headerName: 'Created at',
-    type: 'datetime',
-    width: 180,
-    editable: true,
-  },
+  // {
+  //   field: 'created_at',
+  //   headerName: 'Created at',
+  //   type: 'datetime',
+  //   width: 180,
+  //   editable: true,
+  // },
 ];
 
 // const rows = [
