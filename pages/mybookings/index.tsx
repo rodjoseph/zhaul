@@ -27,7 +27,8 @@ export default function MyBookingsPage() {
   const fetchBookings = async () => {
     const {data, error } = await supabase.from<Booking>('bookings').select('*').eq('user', supabase.auth.user()?.id).order('end', {ascending: false})
     if(data) {
-        setBookings(data)
+      setBookings(data)
+      console.log(data)
     }
     else {
         console.log(error?.message)
