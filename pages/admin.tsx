@@ -31,7 +31,8 @@ export default function AdminPage() {
   const fetchBookings = async () => {
     const {data, error } = await supabase.from<Booking>('bookings').select('*').order('end', {ascending: false})
     if(data) {
-        setBookings(data)
+      setBookings(data)
+      console.log(data)
     }
     else {
         console.log(error?.message)

@@ -7,10 +7,10 @@ export default function Index() {
     return(
         <Layout>
         <Container maxWidth="md" sx={{alignItems: 'center'}}>
-            <Typography variant="h2" align="center">
+            <Typography variant="h3">
                 Move with ease
             </Typography>
-            <Typography color="inherit" align="center" variant="h5">
+            <Typography color="inherit" variant="subtitle1">
                 Use our moving service to rent a truck.
             </Typography>
             <Link href="/booking" passHref>
@@ -23,9 +23,6 @@ export default function Index() {
                     Book us now
                 </Button>
             </Link>
-            <Typography variant="body2" color="inherit">
-                Discover the experience
-            </Typography>
       </Container>
       </Layout>
     )

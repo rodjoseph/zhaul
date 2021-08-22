@@ -30,7 +30,7 @@ import { supabase } from "../constants/supabase";
     return (
       <AppBar position="sticky" variant="outlined" elevation={0}>
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="medium"
             edge="start"
             color="inherit"
@@ -38,10 +38,20 @@ import { supabase } from "../constants/supabase";
             sx={{ mr: 2 }}
           >
             <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Z-Haul
-          </Typography>
+          </IconButton> */}
+          <Link href="/" passHref>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Z-Haul
+            </Typography>
+          </Link>
+          <Link href="/" passHref>
+            {/* <IconButton>
+              <InfoIcon />
+            </IconButton> */}
+            <Button color="inherit">
+              Home
+            </Button>
+          </Link>
           <Link href="/booking" passHref>
             {/* <IconButton>
               <InfoIcon />
@@ -107,8 +117,6 @@ import { supabase } from "../constants/supabase";
             </div>
           ) : (
             <>
-              <Link href="/login" passHref><Button color="inherit" variant="outlined">Login</Button></Link>
-              <Link href="/signup" passHref><Button color="inherit" variant="outlined">Signup</Button></Link> 
             </>
           )}
         </Toolbar>
