@@ -20,14 +20,14 @@ const columns: GridColDef[] = [
     field: 'start',
     headerName: 'Start DateTime',
     type: 'datetime',
-    width: 180,
+    width: 150,
     editable: true,
   },
   {
     field: 'end',
     headerName: 'End DateTime',
     type: 'datetime',
-    width: 180,
+    width: 150,
     editable: true,
   },
   // {
@@ -53,6 +53,7 @@ const columns: GridColDef[] = [
 
 export default function BookingsDataGrid({rows}: {rows: Booking[]}) {
   return (
+    <div style={{ height: 900, width: '100%' }}>
     <DataGrid
       rows={rows}
       columns={columns}
@@ -61,5 +62,6 @@ export default function BookingsDataGrid({rows}: {rows: Booking[]}) {
       checkboxSelection
       disableSelectionOnClick
     />
+    </div>
   );
 }
